@@ -1,0 +1,30 @@
+@import "../../styles/global/theme.css";
+
+.menu {
+  position: absolute;
+  top: 20px;
+  right: 10%;
+  font-weight: bolder;
+  display: flex;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.social {
+  margin-right: 14px;
+  display: flex;
+  align-items: center;
+}
+.menu-item {
+  color: var(--primary050);
+  background-color: var(--neutral050);
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-right: 14px;
+}
+
+.menu-item:hover {
+  filter: brightness(0.9);
+}
