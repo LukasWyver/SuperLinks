@@ -1,7 +1,11 @@
 import "./link.css";
 import { FiX, FiClipboard } from "react-icons/fi";
 
-export default function LinkItem({ VisibleClosed, link }) {
+export default function LinkItem({ VisibleClosed, content }) {
+  async function copyLink() {
+    await navigator.clipboard.writeText(content.link);
+  }
+
   return (
     <div className="modal-overlay active">
       <div className="modal">
@@ -13,11 +17,11 @@ export default function LinkItem({ VisibleClosed, link }) {
             </button>
           </div>
           <div className="modal-link">
-            <span>{link}</span>
+            <span>{content.long_url}</span>
           </div>
           <button className="modal-link clipboard">
-            https://bit.ly/szynbc
-            <FiClipboard size={20} color="#171717" />
+            {content.link}
+            <FiClipboard size={20} color="#171717" onClick={copyLink} />
           </button>
         </div>
       </div>
