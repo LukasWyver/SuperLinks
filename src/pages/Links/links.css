@@ -1,5 +1,4 @@
 @import "../../styles/global/theme.css";
-
 .links-container {
   max-width: 1120px;
   margin: 32px auto 0 auto;
@@ -67,6 +66,13 @@
   background-color: var(--primary100);
 }
 
+.empty-text {
+  width: 100%;
+  text-align: center;
+  color: var(--neutral000);
+  margin-top: 28px;
+}
+
 @media (max-width: 715px) {
   .links-container {
     width: 90%;
@@ -86,5 +92,11 @@
 
   .link svg {
     display: none;
+  }
+}
+
+@media (max-width: 660px) {
+  .divider {
+    width: 88%;
   }
 }
